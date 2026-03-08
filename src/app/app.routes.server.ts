@@ -2,6 +2,7 @@ import { Routes as AngularRoutes } from '@angular/router';
 import { Routes } from './enum/routes.enum';
 import { CountableComponent } from './components/countable/countable.component';
 import { ExercisesComponent } from './components/exercises/exercises.component';
+import { SearchComponent } from './components/search/search.component';
 
 export const routes: AngularRoutes = [
     {
@@ -17,5 +18,8 @@ export const routes: AngularRoutes = [
         path: Routes.COUNTABLE,
         component: CountableComponent
     },
-
+    {
+        path: Routes.SEARCH,
+        component: SearchComponent
+    },
 ];

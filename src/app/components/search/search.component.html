@@ -1,0 +1,21 @@
+<div class="flex flex-wrap gap-4 mt-10">
+    <div class="flex flex-col items-center w-full mt-10">
+        <div class="form-control w-full max-w-xs">
+            <label class="label">
+                <span class="label-text">O que você quer praticar hoje? 🔍</span>
+            </label>
+            <input type="text" [formControl]="buscaControl" placeholder="Ex: Signals, RxJS..."
+                class="input input-bordered input-primary w-full shadow-md" />
+        </div>
+    </div>
+
+    @for (resultado of (resultados$ | async); track resultado) {
+    <div class="card w-80 bg-base-100 shadow-xl border">
+        <div class="card-body">
+            <h2 class="card-title">{{ resultado }}</h2>
+        </div>
+    </div>
+    } @empty {
+    <p>Digite algo para buscar...</p>
+    }
+</div>

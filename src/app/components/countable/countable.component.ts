@@ -10,12 +10,7 @@ export class CountableComponent {
   public count = signal(0)
   public isMax = computed(() => this.count() > 10);
 
-  constructor() {
-    effect(() => {
-      console.log(`Valor atual do contador: ${this.count()}`);
-    });
-  }
-
+  constructor() {}
 
   public increaseValue(): void {
     this.count.update((actualValue) => actualValue + 1);

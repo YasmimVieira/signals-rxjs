@@ -1,6 +1,6 @@
-<section class="exercises">
+<section class="exercises flex flex-col md:flex-row items-center md:justify-center gap-6 mt-10 p-4">
 @for (exercise of exerciseList(); track $index) {
-<div class="card w-96 bg-base-100 shadow-sm">
+<div class="card w-96 bg-neutral text-neutral-content ">
   <div class="card-body">
     <span class="badge badge-xs badge-warning">{{ exercise.titulo }}</span>
     <div class="flex justify-between">

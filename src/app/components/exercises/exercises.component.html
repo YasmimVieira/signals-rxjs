@@ -1,0 +1,22 @@
+<section class="exercises">
+@for (exercise of exerciseList(); track $index) {
+<div class="card w-96 bg-base-100 shadow-sm">
+  <div class="card-body">
+    <span class="badge badge-xs badge-warning">{{ exercise.titulo }}</span>
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-bold">{{ exercise.dificuldade }}</h2>
+    </div>
+    <ul class="mt-6 flex flex-col gap-2 text-xs">
+      <li>
+        <span>{{ exercise.id }}</span>
+      </li>
+    </ul>
+    <div class="mt-6">
+      <button class="btn btn-primary btn-block" (click)="selectExercise(exercise.id)" >Entrar</button>
+    </div>
+  </div>
+</div>
+}
+
+</section>
+
